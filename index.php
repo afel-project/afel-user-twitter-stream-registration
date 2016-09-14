@@ -44,7 +44,7 @@
                     } else if (!isset($res->key) || !isset($res->dataset)) {
                          $error = "Issue setting up dataset with AFEL Data Platform";
                     } else {
-                         $row = $_POST['twitter'].' '.$res->dataset.' '.$res->key.' '.$res->ecapi;
+                         $row = $_POST['twitter'].' '.$res->dataset.' '.$res->key.' '.$res->ecapi."\n";
                          file_put_contents('registered', $row, FILE_APPEND | LOCK_EX);
                          $done=TRUE;
                     }
